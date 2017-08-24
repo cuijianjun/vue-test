@@ -3,7 +3,12 @@
 import Vue from 'vue'
 import Layout from './components/layout'
 import IndexPage from './pages/index'
-import DetailPage from './pages/detail'
+import DetailPage from './pages/detail.vue'
+import DetailAnaPage from './pages/detail/analysis'
+import DetailCouPage from './pages/detail/count'
+import DetailForPage from './pages/detail/forecast'
+import DetailPubPage from './pages/detail/publish'
+
 /*饿了么组件库*/
 // import ElementUI from 'element-ui'
 // import 'element-ui/lib/theme-default/index.css'
@@ -24,7 +29,26 @@ let router = new Router({
     },
     {
       path:'/detail',
-      component:DetailPage
+      component:DetailPage,
+      redirect:'/detail/analysis',
+      children:[
+        {
+          path:'analysis',
+          component:DetailAnaPage
+        },
+        {
+          path:'count',
+          component:DetailCouPage
+        },
+        {
+          path:'forecast',
+          component:DetailForPage
+        },
+        {
+          path:'publish',
+          component:DetailPubPage
+        }
+      ]
     }
   ]
 })

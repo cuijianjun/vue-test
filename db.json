@@ -29,7 +29,11 @@
     "amount": 678
   },
   "createOrder": {
-    "orderId": "6djk979"
+    "buyNumber": 1,
+    "buyType": 0,
+    "period": 0,
+    "version": "0",
+    "bankId": null
   },
   "getOrderList": {
     "list": [

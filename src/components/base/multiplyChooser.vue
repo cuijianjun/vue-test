@@ -12,7 +12,7 @@
     </div>
 </template>
 
-<script>
+<script type="text/ecmascript-6">
 import _ from 'lodash'
 export default {
   props: {
@@ -32,7 +32,7 @@ export default {
   methods: {
     toggleSelection (index) {
       if (this.nowIndexes.indexOf(index) === -1) {
-        this.nowIndexes.push(index)  
+        this.nowIndexes.push(index)
       }
       else {
         this.nowIndexes = _.remove(this.nowIndexes, (idx) => {
