@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import Layout from './components/layout'
 import IndexPage from './pages/index'
+import DetailPage from './pages/detail'
 /*饿了么组件库*/
 // import ElementUI from 'element-ui'
 // import 'element-ui/lib/theme-default/index.css'
@@ -20,6 +21,10 @@ let router = new Router({
     {
       path:'/',
       component:IndexPage
+    },
+    {
+      path:'/detail',
+      component:DetailPage
     }
   ]
 })

@@ -4,7 +4,7 @@
       <div class="g-form-line">
         <span class="g-form-label">用户名：</span>
         <div class="g-form-input">
-          <input type="text" 
+          <input type="text"
           v-model="usernameModel" placeholder="请输入用户名">
         </div>
         <span class="g-form-error">{{ userErrors.errorText }}</span>
@@ -12,7 +12,7 @@
       <div class="g-form-line">
         <span class="g-form-label">密码：</span>
         <div class="g-form-input">
-          <input type="password" 
+          <input type="password"
           v-model="passwordModel" placeholder="请输入密码">
         </div>
         <span class="g-form-error">{{ passwordErrors.errorText }}</span>
@@ -27,7 +27,7 @@
   </div>
 </template>
 
-<script>
+<script type="text/ecmascript-6">
 export default {
   data () {
     return {
@@ -83,7 +83,7 @@ export default {
       }
       else {
         this.errorText = ''
-        this.$http.get('api/login')
+        this.$axios.get('api/login')
         .then((res) => {
           this.$emit('has-log', res.data)
         }, (error) => {
